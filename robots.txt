@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://profit-up.kz/sitemap.xml
