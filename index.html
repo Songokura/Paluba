@@ -26,7 +26,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width:760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20260905-1">
+<link rel="stylesheet" href="styles.css?v=20260907-1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,16 +45,16 @@
   "areaServed": "KZ",
   "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00"},
   "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Направления", "itemListElement": [
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Видеонаблюдение", "url": "https://profit-up.kz/#videonablyudenie"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Пожарная сигнализация", "url": "https://profit-up.kz/#pozharnaya"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "СКУД", "url": "https://profit-up.kz/#skud"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Охранная сигнализация", "url": "https://profit-up.kz/#ohrannaya"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Тревожная сигнализация и тревожные кнопки", "url": "https://profit-up.kz/#trevozhnaya"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Домофония", "url": "https://profit-up.kz/#domofoniya"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "СКС и слаботочные сети", "url": "https://profit-up.kz/#sks"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Автоматизация и интеграция систем", "url": "https://profit-up.kz/#avtomatizaciya"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Шлагбаумы, ворота, контроль въезда", "url": "https://profit-up.kz/#shlagbaumy"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Комплексная организация охраны объектов", "url": "https://profit-up.kz/#ohrana-obektov"}}
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Видеонаблюдение", "url": "https://profit-up.kz/videonablyudenie/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Пожарная сигнализация", "url": "https://profit-up.kz/pozharnaya-signalizaciya/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "СКУД", "url": "https://profit-up.kz/skud/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Охранная сигнализация", "url": "https://profit-up.kz/ohrannaya-signalizaciya/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Тревожная сигнализация и тревожные кнопки", "url": "https://profit-up.kz/trevozhnaya-knopka/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Домофония", "url": "https://profit-up.kz/domofoniya/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "СКС и слаботочные сети", "url": "https://profit-up.kz/sks-slabotochnye-seti/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Автоматизация и интеграция систем", "url": "https://profit-up.kz/avtomatizaciya/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Шлагбаумы, ворота, контроль въезда", "url": "https://profit-up.kz/shlagbaumy/"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Комплексная организация охраны объектов", "url": "https://profit-up.kz/ohrana-obektov/"}}
   ]}
 }
 </script>
@@ -65,7 +65,7 @@
   <div class="hdr-in">
     <a class="brand" href="#top" aria-label="Profit-Up, на главную">Profit-Up</a>
     <nav class="nav" aria-label="Разделы сайта">
-      <a href="#napravleniya">Направления</a>
+      <div class="drop"><button type="button" class="drop-b" aria-expanded="false">Направления<i></i></button><div class="drop-m"><a href="videonablyudenie/">Видеонаблюдение</a><a href="pozharnaya-signalizaciya/">Пожарная сигнализация</a><a href="ohrannaya-signalizaciya/">Охранная сигнализация</a><a href="trevozhnaya-knopka/">Тревожная кнопка</a><a href="skud/">СКУД</a><a href="domofoniya/">Домофония</a><a href="sks-slabotochnye-seti/">СКС и слаботочка</a><a href="avtomatizaciya/">Автоматизация и интеграция</a><a href="shlagbaumy/">Шлагбаумы и въезд</a><a href="ohrana-obektov/">Охрана объектов</a><a href="#napravleniya">Все на этой странице</a></div></div>
       <a href="#cikl">Полный цикл</a>
       <a href="#klienty">Клиенты</a>
       <a href="#partnery">Партнёры</a>
@@ -87,6 +87,17 @@
     <a class="mn" href="#partnery">Партнёры и оборудование</a>
     <a class="mn" href="#faq">Вопросы</a>
     <a class="mn" href="#kontakty">Контакты</a>
+    <p class="mnav-t">Страницы направлений</p>
+    <a class="mn" href="videonablyudenie/">Видеонаблюдение</a>
+    <a class="mn" href="pozharnaya-signalizaciya/">Пожарная сигнализация</a>
+    <a class="mn" href="ohrannaya-signalizaciya/">Охранная сигнализация</a>
+    <a class="mn" href="trevozhnaya-knopka/">Тревожная кнопка</a>
+    <a class="mn" href="skud/">СКУД</a>
+    <a class="mn" href="domofoniya/">Домофония</a>
+    <a class="mn" href="sks-slabotochnye-seti/">СКС и слаботочка</a>
+    <a class="mn" href="avtomatizaciya/">Автоматизация и интеграция</a>
+    <a class="mn" href="shlagbaumy/">Шлагбаумы и въезд</a>
+    <a class="mn" href="ohrana-obektov/">Охрана объектов</a>
     <div class="mnav-ct">
       <a class="btn btn-sig wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Хочу вызвать инженера на объект и получить расчёт.">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
@@ -158,7 +169,7 @@
         </ul>
         <div class="btns">
           <a class="btn btn-sig wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по видеонаблюдению для объекта.">Расчёт по видеонаблюдению</a>
-          <a class="btn btn-ghost" href="#napravleniya">Все направления</a>
+          <a class="btn btn-ghost" href="videonablyudenie/">О видеонаблюдении <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a>
         </div>
         <p class="brands">Dahua · Hikvision · Macroscop · другие производители</p>
       </div>
@@ -186,7 +197,7 @@
         </ul>
         <div class="btns">
           <a class="btn btn-sig wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по пожарной сигнализации для объекта.">Расчёт по пожарной сигнализации</a>
-          <a class="btn btn-ghost" href="#cikl">Как проходит работа</a>
+          <a class="btn btn-ghost" href="pozharnaya-signalizaciya/">О пожарной сигнализации <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a>
         </div>
       </div>
     </div>
@@ -213,7 +224,7 @@
         </ul>
         <div class="btns">
           <a class="btn btn-sig wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по системе контроля доступа (СКУД) для объекта.">Расчёт по СКУД</a>
-          <a class="btn btn-ghost" href="#napravleniya">Все направления</a>
+          <a class="btn btn-ghost" href="skud/">О СКУД <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a>
         </div>
       </div>
     </div>
@@ -234,38 +245,38 @@
     <div class="grid">
       <article class="card rv" id="ohrannaya">
         <div class="im"><img src="assets/c-ohran.webp" alt="Кодовая панель охранной сигнализации на стене" width="900" height="675" loading="lazy" decoding="async"><div class="cells" data-cells></div><div class="sw"><i></i></div></div>
-        <div class="cb"><h3>Охранная сигнализация</h3><p>Датчики открытия, движения и разбития стекла. Автономно, на пост охраны или в связке с видео и СКУД.</p>
-          <a class="more wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по охранной сигнализации.">Получить расчёт <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a></div>
+        <div class="cb"><h3><a href="ohrannaya-signalizaciya/">Охранная сигнализация</a></h3><p>Датчики открытия, движения и разбития стекла. Автономно, на пост охраны или в связке с видео и СКУД.</p>
+          <div class="c-act"><a class="more" href="ohrannaya-signalizaciya/">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a><a class="c-wa wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по охранной сигнализации." aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a></div></div>
       </article>
       <article class="card rv" id="trevozhnaya">
         <div class="im"><img src="assets/c-trevoga.webp" alt="Клавиатура тревожной сигнализации" width="900" height="675" loading="lazy" decoding="async"><div class="cells" data-cells></div><div class="sw"><i></i></div></div>
-        <div class="cb"><h3>Тревожная кнопка</h3><p>Стационарная, беспроводная или носимый брелок. Офисы, магазины, учреждения, жильё, транспорт.</p>
-          <a class="more wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по тревожной сигнализации / тревожной кнопке.">Получить расчёт <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a></div>
+        <div class="cb"><h3><a href="trevozhnaya-knopka/">Тревожная кнопка</a></h3><p>Стационарная, беспроводная или носимый брелок. Офисы, магазины, учреждения, жильё, транспорт.</p>
+          <div class="c-act"><a class="more" href="trevozhnaya-knopka/">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a><a class="c-wa wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по тревожной сигнализации / тревожной кнопке." aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a></div></div>
       </article>
       <article class="card rv" id="domofoniya">
         <div class="im"><img src="assets/c-domofon.webp" alt="Вызывная панель домофона на входной группе" width="900" height="675" loading="lazy" decoding="async"><div class="cells" data-cells></div><div class="sw"><i></i></div></div>
-        <div class="cb"><h3>Домофония</h3><p>Аудио- и видеодомофоны, входные группы, управление дверями и калитками, связка с камерами и СКУД.</p>
-          <a class="more wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по домофонии для входной группы.">Получить расчёт <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a></div>
+        <div class="cb"><h3><a href="domofoniya/">Домофония</a></h3><p>Аудио- и видеодомофоны, входные группы, управление дверями и калитками, связка с камерами и СКУД.</p>
+          <div class="c-act"><a class="more" href="domofoniya/">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a><a class="c-wa wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по домофонии для входной группы." aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a></div></div>
       </article>
       <article class="card rv" id="sks">
         <div class="im"><img src="assets/c-sks.webp" alt="Патч-панель структурированной кабельной системы" width="900" height="675" loading="lazy" decoding="async"><div class="cells" data-cells></div><div class="sw"><i></i></div></div>
-        <div class="cb"><h3>СКС и слаботочные сети</h3><p>Кабельная основа для камер, контроллеров, серверов и рабочих мест. Маркировка, совместимость, запас на расширение.</p>
-          <a class="more wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по СКС / слаботочным сетям.">Получить расчёт <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a></div>
+        <div class="cb"><h3><a href="sks-slabotochnye-seti/">СКС и слаботочные сети</a></h3><p>Кабельная основа для камер, контроллеров, серверов и рабочих мест. Маркировка, совместимость, запас на расширение.</p>
+          <div class="c-act"><a class="more" href="sks-slabotochnye-seti/">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a><a class="c-wa wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по СКС / слаботочным сетям." aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a></div></div>
       </article>
       <article class="card rv" id="avtomatizaciya">
         <div class="im"><img src="assets/c-avto.webp" alt="Серверная стойка с сетевым оборудованием" width="900" height="675" loading="lazy" decoding="async"><div class="cells" data-cells></div><div class="sw"><i></i></div></div>
-        <div class="cb"><h3>Автоматизация и интеграция</h3><p>Событие СКУД привязано к видеозаписи, тревога уходит на пост, пожарная автоматика запускает сценарий.</p>
-          <a class="more wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Интересует автоматизация и интеграция систем безопасности.">Получить расчёт <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a></div>
+        <div class="cb"><h3><a href="avtomatizaciya/">Автоматизация и интеграция</a></h3><p>Событие СКУД привязано к видеозаписи, тревога уходит на пост, пожарная автоматика запускает сценарий.</p>
+          <div class="c-act"><a class="more" href="avtomatizaciya/">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a><a class="c-wa wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Интересует автоматизация и интеграция систем безопасности." aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a></div></div>
       </article>
       <article class="card rv" id="shlagbaumy">
         <div class="im"><img src="assets/c-shlagbaum.webp" alt="Шлагбаум на въезде на территорию здания" width="900" height="675" loading="lazy" decoding="async"><div class="cells" data-cells></div><div class="sw"><i></i></div></div>
-        <div class="cb"><h3>Шлагбаумы и въезд</h3><p>Шлагбаумы, автоматические ворота, идентификация транспорта, учёт въезда и парковки.</p>
-          <a class="more wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по шлагбауму / контролю въезда.">Получить расчёт <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a></div>
+        <div class="cb"><h3><a href="shlagbaumy/">Шлагбаумы и въезд</a></h3><p>Шлагбаумы, автоматические ворота, идентификация транспорта, учёт въезда и парковки.</p>
+          <div class="c-act"><a class="more" href="shlagbaumy/">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a><a class="c-wa wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Нужен расчёт по шлагбауму / контролю въезда." aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a></div></div>
       </article>
       <article class="card rv" id="ohrana-obektov">
         <div class="im"><img src="assets/c-ohrana-ob.webp" alt="Административное здание ночью с освещёнными окнами" width="900" height="675" loading="lazy" decoding="async"><div class="cells" data-cells></div><div class="sw"><i></i></div></div>
-        <div class="cb"><h3>Охрана объектов</h3><p>Техника Profit-Up плюс партнёрская охранная организация: пультовой мониторинг и реагирование по условиям договора.</p>
-          <a class="more wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Интересует комплексная организация охраны объекта.">Получить расчёт <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a></div>
+        <div class="cb"><h3><a href="ohrana-obektov/">Охрана объектов</a></h3><p>Техника Profit-Up плюс партнёрская охранная организация: пультовой мониторинг и реагирование по условиям договора.</p>
+          <div class="c-act"><a class="more" href="ohrana-obektov/">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12l-4.5-4.5L14 6l6 6-6 6-1.5-1.5L17 12H5z"/></svg></a><a class="c-wa wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Интересует комплексная организация охраны объекта." aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a></div></div>
       </article>
       <article class="card cta rv">
         <div class="cb"><p class="kick">Не знаете, что нужно</p><h3>Инженер посмотрит объект и предложит решение</h3><p>Обследование, техническое решение и расчёт стоимости по этапам.</p>
@@ -473,9 +484,10 @@
   <div class="wrap ftr-in">
     <a class="brand" href="#top">Profit-Up</a>
     <nav aria-label="Футер">
-      <a href="#videonablyudenie">Видеонаблюдение</a>
-      <a href="#pozharnaya">Пожарная сигнализация</a>
-      <a href="#skud">СКУД</a>
+      <a href="videonablyudenie/">Видеонаблюдение</a>
+      <a href="pozharnaya-signalizaciya/">Пожарная сигнализация</a>
+      <a href="ohrannaya-signalizaciya/">Охранная сигнализация</a>
+      <a href="skud/">СКУД</a>
       <a href="#napravleniya">Все направления</a>
       <a href="#kontakty">Контакты</a>
     </nav>
@@ -488,6 +500,6 @@
   <a class="w wa" href="https://wa.me/7XXXXXXXXXX" data-wa="Здравствуйте! Хочу вызвать инженера на объект."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>WhatsApp</a>
 </div>
 
-<script src="script.js?v=20260905-1" defer></script>
+<script src="script.js?v=20260907-1" defer></script>
 </body>
 </html>
