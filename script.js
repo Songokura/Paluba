@@ -223,6 +223,36 @@ if (HAS_IO && !RED) {
   document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
 }
 
+/* ---------------- АКТИВНЫЙ РАЗДЕЛ В ШАПКЕ ----------------
+   Подсвечиваем пункт меню того раздела, который сейчас на экране:
+   человек всегда видит, где он находится на странице. */
+var navLinks = [].slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+var spy = navLinks.map(function(a){
+  return { a: a, t: document.getElementById(a.getAttribute("href").slice(1)) };
+}).filter(function(x){ return x.t; });
+var dropBox = document.querySelector(".nav .drop");
+var dirsSec = document.getElementById("napravleniya");
+if (spy.length) {
+  var spyTick = false;
+  var runSpy = function(){
+    var line = (innerHeight || 800) * 0.35, best = null;
+    spy.forEach(function(x){
+      var r = x.t.getBoundingClientRect();
+      if (r.top <= line && r.bottom > line) best = x;
+    });
+    spy.forEach(function(x){ x.a.classList.toggle("act", x === best); });
+    if (dropBox && dirsSec) {
+      var r = dirsSec.getBoundingClientRect();
+      dropBox.classList.toggle("act", r.top <= line && r.bottom > line);
+    }
+  };
+  addEventListener("scroll", function(){
+    if (spyTick) return; spyTick = true;
+    requestAnimationFrame(function(){ spyTick = false; runSpy(); });
+  }, {passive:true});
+  runSpy();
+}
+
 /* ---------------- ФОРМА → WhatsApp ----------------
    Антибот: honeypot (поле «Компания»), время заполнения от 3 с,
    обязательное согласие. Чистый обработчик submit - под gtag-конверсии. */
