@@ -405,7 +405,13 @@ html.js .cl.in li{opacity:1;transform:none}
 /* ---------- каталог направлений: 10 равных блоков ---------- */
 .dirs{position:relative;z-index:1;margin-top:clamp(28px,3.4vw,44px);display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
 @media(min-width:640px){.dirs{grid-template-columns:repeat(4,1fr)}}
-@media(min-width:1080px){.dirs{grid-template-columns:repeat(5,1fr);gap:12px}}
+@media(min-width:1080px){.dirs{gap:12px}}
+/* широкая карточка: направление, которое есть не у всех - на две колонки */
+.dir.wide{grid-column:span 2}
+.dir.wide .im{aspect-ratio:8/3}
+.dir.wide .im .cells{--cols:10;--rows:4}
+@media(min-width:640px){.dir.wide h3{font-size:clamp(17px,1.5vw,22px)}}
+@media(max-width:599px){.dir.wide p{display:block}}
 .dir{position:relative;display:flex;flex-direction:column;background:var(--ink2);border:1px solid var(--line);border-radius:14px;overflow:hidden;
   box-shadow:0 1px 2px rgba(13,19,25,.04);transition:border-color .3s,transform .3s,box-shadow .3s}
 .dir:hover{border-color:rgba(var(--sig-rgb),.5);transform:translateY(-3px);box-shadow:0 16px 30px -16px rgba(13,19,25,.3)}
