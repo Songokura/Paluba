@@ -1,11 +1,11 @@
 /* ============================================================
-   PROFIT-UP - скрипт страницы.
+   PALUBA - скрипт страницы.
    Плиты и сборка кадра из ячеек · HUD героя · меню · ленты ·
    появление блоков · форма в WhatsApp с антибот-проверкой. Библиотек нет.
    ============================================================ */
 (function(){
 "use strict";
-var WA = "7XXXXXXXXXX";                 /* WhatsApp Profit-Up: заменить одной правкой */
+var WA = "7XXXXXXXXXX";                 /* WhatsApp Paluba: заменить одной правкой */
 var RED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 var HAS_IO = typeof IntersectionObserver === "function";
 var root = document.documentElement;
@@ -19,7 +19,7 @@ function pad3(n){ n = Math.round(n); return (n < 10 ? "00" : n < 100 ? "0" : "")
 /* ---------------- WHATSAPP-ССЫЛКИ ----------------
    Текст лежит в data-wa, номер - в константе выше. */
 document.querySelectorAll("a.wa").forEach(function(a){
-  var t = a.getAttribute("data-wa") || "Здравствуйте! Пишу с сайта Profit-Up.";
+  var t = a.getAttribute("data-wa") || "Здравствуйте! Пишу с сайта Paluba.";
   a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(t);
   a.target = "_blank"; a.rel = "noopener";
 });
@@ -268,7 +268,7 @@ if (form) form.addEventListener("submit", function(e){
   var sys = form.sys.value, msg = form.msg.value.trim(), agree = form.agree.checked;
   if (!name || phone.replace(/\D/g, "").length < 10 || !agree) { err.hidden = false; ok.hidden = true; return; }
   err.hidden = true;
-  var t = "Здравствуйте! Заявка с сайта Profit-Up.\nИмя: " + name + "\nТелефон: " + phone +
+  var t = "Здравствуйте! Заявка с сайта Paluba.\nИмя: " + name + "\nТелефон: " + phone +
     (sys ? "\nНаправление: " + sys : "") + (msg ? "\nОбъект и задача: " + msg : "");
   ok.hidden = false;
   window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(t), "_blank", "noopener");

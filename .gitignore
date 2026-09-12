@@ -4,3 +4,5 @@ _deploy/
 .claude/
 .DS_Store
 *.log
+_shot*
+__*.html
