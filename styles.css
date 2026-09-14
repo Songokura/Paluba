@@ -63,6 +63,8 @@ body.menu-open .hdr{backdrop-filter:none;-webkit-backdrop-filter:none;background
 .hdr-in{height:100%;width:min(1320px,100% - 40px);margin-inline:auto;display:flex;align-items:center;gap:22px}
 @media(min-width:761px){.hdr-in{width:min(1320px,100% - 64px)}}
 .brand{position:relative;z-index:60;display:flex;align-items:center;gap:10px;font:700 22px/1 var(--ft);letter-spacing:.02em;text-transform:uppercase;color:var(--paper);flex:0 0 auto}
+.brand img{width:48px;height:48px;flex:0 0 auto}
+@media(min-width:761px){.brand img{width:56px;height:56px}}
 .nav{display:flex;gap:26px;margin-left:auto;font:500 14px/1 var(--ft);color:var(--steel2)}
 .nav a{position:relative;padding:6px 0;transition:color .2s}
 .nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--sig);transition:right .3s}
@@ -371,6 +373,7 @@ html.js .cl.in li{opacity:1;transform:none}
 @media(min-width:761px){.ftr{padding-bottom:34px}}
 .ftr-in{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:13px;color:var(--steel)}
 .ftr .brand{font-size:19px}
+.ftr .brand img{width:48px;height:48px}
 .ftr nav{display:flex;flex-wrap:wrap;gap:16px}
 .ftr nav a:hover{color:var(--paper)}
 
