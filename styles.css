@@ -9,7 +9,8 @@
   --ink:#F1F4F7; --ink2:#FFFFFF; --ink3:#E6EBF0;
   --line:rgba(13,19,25,.11); --line2:rgba(13,19,25,.20);
   --steel:#64707D; --steel2:#38434F; --paper:#0D1319;
-  --sig:#07713D; --sig-rgb:7,113,61; --sig-h:#0A8F4E; --on-sig:#FFFFFF;
+  /* акцент - тёмно-синий логотипа #0B3768; зелёный остаётся только у WhatsApp (.wa ниже) */
+  --sig:#0B3768; --sig-rgb:11,55,104; --sig-h:#164C8C; --on-sig:#FFFFFF;
   --ghost-bg:transparent; --grid:rgba(13,19,25,.05);
   --dark:#0D1319; --dark2:#161C24; --amber:#B9781A;
   --fd:"Advent Pro","Segoe UI",sans-serif;
@@ -25,8 +26,11 @@
   --ink:#0D1319; --ink2:#161C24; --ink3:#1D242D;
   --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.18);
   --steel:#8B96A3; --steel2:#C3CBD4; --paper:#EEF2F5;
-  --sig:#35E07A; --sig-rgb:53,224,122; --sig-h:#5BEA95; --on-sig:#06220F;
+  --sig:#4F9DFF; --sig-rgb:79,157,255; --sig-h:#74B2FF; --on-sig:#041A3A;
   --ghost-bg:rgba(10,13,17,.28); --grid:rgba(255,255,255,.05)}
+/* WhatsApp сохраняет фирменный зелёный: кнопки и иконки со ссылкой на wa.me (класс .wa) */
+.wa{--sig:#07713D; --sig-rgb:7,113,61; --sig-h:#0A8F4E; --on-sig:#FFFFFF}
+:is(.plate,.ph,.im,.frame,.bar,.ftr,.dark) .wa{--sig:#35E07A; --sig-rgb:53,224,122; --sig-h:#5BEA95; --on-sig:#06220F}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 html.js{scroll-behavior:auto}
