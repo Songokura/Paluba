@@ -5,7 +5,7 @@
    ============================================================ */
 (function(){
 "use strict";
-var WA = "7XXXXXXXXXX";                 /* WhatsApp Paluba: заменить одной правкой */
+var WA = "77012120404";                 /* WhatsApp Paluba: заменить одной правкой */
 var RED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 var HAS_IO = typeof IntersectionObserver === "function";
 var root = document.documentElement;
