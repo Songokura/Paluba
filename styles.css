@@ -363,6 +363,16 @@ html.js .cl.in li{opacity:1;transform:none}
 .fm-msg.err{background:rgba(242,179,61,.1);color:var(--amber);border:1px solid rgba(242,179,61,.35)}
 .form .alt-wa{text-align:center;font-size:13px;color:var(--steel)}
 .form .alt-wa a{color:var(--sig);font-weight:600}
+/* Форма Битрикс24: своя вёрстка внутри нашей карточки (стили B24 грузятся позже, поэтому !important) */
+.form.b24{display:block;min-height:260px}
+.b24 .b24-form-wrapper,.b24 .b24-form-wrapper.b24-form-shadow{max-width:none!important;margin:0!important;box-shadow:none!important;border:0!important;background:transparent!important}
+.b24 .b24-form-content,.b24 .b24-form-padding-side{padding-left:0!important;padding-right:0!important}
+.b24 .b24-form-header-padding{display:none!important}
+.b24 .b24-form-field{margin-bottom:12px!important}
+.b24 .b24-form-control{border:1px solid var(--line2)!important;border-radius:10px!important;background:var(--ink)!important}
+.b24 .b24-form-control:focus{border-color:var(--sig)!important}
+.b24 .b24-form-btn{border-radius:999px!important;font-weight:600!important}
+.b24 .alt-wa{margin:12px 0 0}
 .ct{display:grid;gap:22px}
 .ct .big{font:700 clamp(34px,3.2vw,48px)/1 var(--fd);letter-spacing:.02em;color:var(--paper)}
 .ct .big:hover{color:var(--sig)}

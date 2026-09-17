@@ -253,24 +253,4 @@ if (spy.length) {
   runSpy();
 }
 
-/* ---------------- ФОРМА → WhatsApp ----------------
-   Антибот: honeypot (поле «Компания»), время заполнения от 3 с,
-   обязательное согласие. Чистый обработчик submit - под gtag-конверсии. */
-var form = document.getElementById("zayavka");
-var T0 = Date.now();
-var t0f = document.getElementById("f-t0"); if (t0f) t0f.value = String(T0);
-if (form) form.addEventListener("submit", function(e){
-  e.preventDefault();
-  var ok = document.getElementById("fm-ok"), err = document.getElementById("fm-err");
-  if (form.company && form.company.value) { ok.hidden = false; return; }          /* honeypot: тихо */
-  if (Date.now() - T0 < 3000) { err.hidden = false; ok.hidden = true; return; }    /* слишком быстро */
-  var name = form.name.value.trim(), phone = form.phone.value.trim();
-  var sys = form.sys.value, msg = form.msg.value.trim(), agree = form.agree.checked;
-  if (!name || phone.replace(/\D/g, "").length < 10 || !agree) { err.hidden = false; ok.hidden = true; return; }
-  err.hidden = true;
-  var t = "Здравствуйте! Заявка с сайта Paluba.\nИмя: " + name + "\nТелефон: " + phone +
-    (sys ? "\nНаправление: " + sys : "") + (msg ? "\nОбъект и задача: " + msg : "");
-  ok.hidden = false;
-  window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(t), "_blank", "noopener");
-});
 })();
