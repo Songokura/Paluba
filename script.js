@@ -1,7 +1,7 @@
 /* ============================================================
    PALUBA - скрипт страницы.
    Плиты и сборка кадра из ячеек · HUD героя · меню · ленты ·
-   появление блоков · форма в WhatsApp с антибот-проверкой. Библиотек нет.
+   появление блоков · конверсии Google Ads. Библиотек нет.
    ============================================================ */
 (function(){
 "use strict";
@@ -252,5 +252,30 @@ if (spy.length) {
   }, {passive:true});
   runSpy();
 }
+
+/* ---------------- КОНВЕРСИИ GOOGLE ADS (AW-18457188520) ----------------
+   Три цели из кабинета клиента:
+     Dq5QCNT4gPwcEKixieFE - Интерактивные номера телефонов (клик по tel:)
+     yZ7WCJWEgfwcEKixieFE - Отправка формы для потенциальных клиентов (форма Битрикс24 принята CRM)
+     iLBzCKi3_PscEKixieFE - Контакт (клик по WhatsApp)
+   Слушатель кликов делегированный и в фазе перехвата: кнопок звонка и WhatsApp по несколько
+   на странице, а переход по ним уводит со страницы. Ссылку не трогаем - код LeadBot в ней остаётся. */
+function adsConversion(label){
+  if (typeof gtag !== "function") return;   /* блокировщик рекламы или тег не загрузился */
+  gtag("event", "conversion", {
+    "send_to": "AW-18457188520/" + label,
+    "value": 1.0,
+    "currency": "USD"
+  });
+}
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
+  var h = a.getAttribute("href") || "";
+  if (h.indexOf("tel:") === 0) adsConversion("Dq5QCNT4gPwcEKixieFE");
+  else if (/wa\.me\//.test(h)) adsConversion("iLBzCKi3_PscEKixieFE");
+}, true);
+/* Форма Битрикс24 шлёт это событие на window только после ответа CRM «заявка принята»:
+   пустая или отклонённая отправка конверсию не даёт. */
+addEventListener("b24:form:send:success", function(){ adsConversion("yZ7WCJWEgfwcEKixieFE"); });
 
 })();
